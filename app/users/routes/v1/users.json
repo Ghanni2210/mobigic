@@ -1,0 +1,38 @@
+{
+  "/user/": {
+    "POST": {
+      "route": "create",
+      "policy": []
+    },
+    "GET" : {
+      "route": "findUserByFbToeknAndPhone",
+      "policy": []
+    }
+  },
+  "/login": {
+    "POST": {
+      "route": "login",
+      "policy": []
+    }
+  },
+  "/user/:userId": {
+    "PUT" : {
+      "route": "update",
+      "policy": []
+    },
+    "DELETE" : {
+      "route": "delete",
+      "policy": []
+    },
+    "GET": {
+      "route": "findById",
+      "policy": []
+    }
+  },
+  "/user_profile/:userId" :{
+    "PUT" : {
+      "route": "userImageUpload",
+      "policy": []
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "/files/": {
+    "POST": {
+      "route": "uploadFile",
+      "policy": ["auth:verifyToken"]
+    },
+    "GET" : {
+      "route": "getFiles",
+      "policy": ["auth:verifyToken"]
+    },
+    "DELETE" : {
+      "route": "removeFile",
+      "policy": ["auth:verifyToken"]
+    }
+  },
+  "/downloadfile/:code": {
+    "GET" : {
+      "route": "getFileDownloadURL",
+      "policy": ["auth:verifyToken"]
+    }
+  }
+}

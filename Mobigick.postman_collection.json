@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "1bf33c2b-6cd6-4a8f-95e3-b8cc6dbee518",
+		"name": "Mobigick",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"Nikhil\",\n\t\"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\":\"60bcdeb4f714df7602c7a374\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJjZGViNGY3MTRkZjc2MDJjN2EzNzQiLCJpYXQiOjE2MjI5OTA1MTYsImV4cCI6MTYyMzAyNjUxNiwiaXNzIjoibG9jYWhvc3QifQ.BGmKWrf5y03DntdWQ4gt-tLqjETtWRaIfP9o9Tdrcv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageFile",
+							"type": "file",
+							"src": "/Users/300069981/Desktop/inventoryUploadPretr.csv"
+						},
+						{
+							"key": "userId",
+							"value": "60bcdeb4f714df7602c7a374",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3002/files",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  User Files",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJjZGViNGY3MTRkZjc2MDJjN2EzNzQiLCJpYXQiOjE2MjI5OTA1MTYsImV4cCI6MTYyMzAyNjUxNiwiaXNzIjoibG9jYWhvc3QifQ.BGmKWrf5y03DntdWQ4gt-tLqjETtWRaIfP9o9Tdrcv0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/files",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get File Download URL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJjZGViNGY3MTRkZjc2MDJjN2EzNzQiLCJpYXQiOjE2MjI5OTA1MTYsImV4cCI6MTYyMzAyNjUxNiwiaXNzIjoibG9jYWhvc3QifQ.BGmKWrf5y03DntdWQ4gt-tLqjETtWRaIfP9o9Tdrcv0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/downloadFile/554901",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"downloadFile",
+						"554901"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  File",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJjZGViNGY3MTRkZjc2MDJjN2EzNzQiLCJpYXQiOjE2MjI5OTA1MTYsImV4cCI6MTYyMzAyNjUxNiwiaXNzIjoibG9jYWhvc3QifQ.BGmKWrf5y03DntdWQ4gt-tLqjETtWRaIfP9o9Tdrcv0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"code\":561555\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/files",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
